@@ -1,15 +1,14 @@
-### GitHubだけで作成できるスライド
-　  
-
-　  
-　  
-　　　　　Your　Name
+### Pyspart勉強会
 ---
 こんな感じのスライドが作れます。
 ---
-「GitPitch」というサービスを使っています。
+### What is pyspark?
+
+Pysparkってpythonと何が違うの?
 ---
-必要なのは、GitHubアカウントのみ。
+そもそもpysparkとは、sparkというライブラリから来ている
+spark()
+
 ---
 作り方
 ---

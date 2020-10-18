@@ -1,9 +1,7 @@
 ### Pyspart勉強会
 ---
-@transition[none]
-
-@snap[north]
 ### What is pyspark?
+
 
 Pysparkってpythonと何が違うの?
 ---

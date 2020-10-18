@@ -4,6 +4,9 @@
 ---
 ### What is pyspark?
 
+
+
+
 Pysparkってpythonと何が違うの?
 ---
 そもそもpysparkとは、sparkというライブラリから来ている

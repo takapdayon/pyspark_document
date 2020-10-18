@@ -3,10 +3,8 @@
 こんな感じのスライドが作れます。
 ---
 ### What is pyspark?
-
-
-
-
+<br>
+<br>
 Pysparkってpythonと何が違うの?
 ---
 そもそもpysparkとは、sparkというライブラリから来ている

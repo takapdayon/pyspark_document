@@ -1,10 +1,10 @@
 ### Pyspart勉強会
 ---
-こんな感じのスライドが作れます。
----
+@transition[none]
+
+@snap[north]
 ### What is pyspark?
-<br>
-<br>
+
 Pysparkってpythonと何が違うの?
 ---
 そもそもpysparkとは、sparkというライブラリから来ている

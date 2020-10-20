@@ -93,11 +93,13 @@ section {
 
 環境構築はいろいろとめんどそうだった(jdkいれて、spark入れてパス通してうんぬんかんぬん)ので、docker-hubで公開されている**いい感じ**のイメージを拝借したいと思います
 
-url()
+url(https://hub.docker.com/r/jupyter/tensorflow-notebook)
+
+※要領3G超えててビビりました...
 
 ---
 
-## Jupyter notebookとは
+## Jupyterとは
 
 データ分析、研究機構当でよく利用されています(知りませんでいた...)
 ブラウザ上でコードを実行できたり、ドキュメントを作成できたりします

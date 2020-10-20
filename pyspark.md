@@ -67,12 +67,23 @@ wikiから見たのがいけないんだ!公式を見てみよう!
 ![ center](assets/strongword.jpg)
 
 ---
+<!-- Scoped style -->
+<style scoped>
+li {
+  font-size:30px;
+}
+</style>
 
 ## Apache Sparkとは?
-+ 大量のデータをいい感じに並列処理してくれて捌ける
-+ 処理がMapReduceに比べて超高速(インメモリ処理のため)
-+ ついでに加工もできる
-+ データの出力方法を複数選択できる
++ 大量のデータを高速に処理したいときに使うよ
++ サーバを跨いだ並列処理が行えるよ
++ sparkは以下のプログラム言語から使用できるよ
+  + java, Scala, Python, R
++ sparkは以下の機能が提供されてるよ
+  + 構造化データを処理したいならSpark SQL
+  + 機械学習を行いたいなら、アルゴリズムが用意されているMLlib
+  + グラフを扱って計算とかしたいならGraphX
+  + ストリームデータをリアルタイム処理したいならSpark Streaming
 
 ---
 
@@ -95,7 +106,17 @@ section {
 
 url(https://hub.docker.com/r/jupyter/tensorflow-notebook)
 
-※要領3G超えててビビりました...
+
+---
+
+## 使い方(python api)
+
+まずは公式が出してるpythonAPI(http://spark.apache.org/docs/latest/api/python/index.html)
+うーん、いくつかみたことあるのが居ますねー
+
++ pyspark.SparkContext
+  + これがないと始まらないメインエントリポイント
++ 
 
 ---
 

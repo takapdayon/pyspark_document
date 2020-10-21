@@ -104,8 +104,11 @@ section {
 
 環境構築はいろいろとめんどそうだった(jdkいれて、spark入れてパス通してうんぬんかんぬん)ので、docker-hubで公開されている**いい感じ**のイメージを拝借したいと思います
 
-url(https://hub.docker.com/r/jupyter/tensorflow-notebook)
+url(https://hub.docker.com/r/jupyter/pyspark-notebook)
 
+```js
+$ docker pull jupyter/pyspark-notebook
+```
 
 ---
 

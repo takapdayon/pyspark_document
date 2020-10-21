@@ -18,7 +18,8 @@ style: |
 
 ---
 
-# アジェンダ
+## アジェンダ
++ やること、やらないこと
 + Pysparkとは?
 + 使い方は?
 + 気を付けるべき点
@@ -33,13 +34,23 @@ img[alt~="center"] {
 
 ---
 
+## やること
++ spark sqlでcsvをSQL文で抽出するー!
+
+---
+
+## やらないこと
++ 難しいこと全部!
+
+---
+
 ## Pysparkとは?
 
-Apache SparkをPythonでラッパーしたライブラリ
+簡単に言えばApache SparkをPythonで使うよーって事!
 Apache Spark(https://spark.apache.org/documentation.html)
 現在はversion3.xまで出ている
 
-そのため、Pysparkはなんなのかということは、sparkを理解すれば解決する事になる
+そのため、Pysparkはなんなのかということは、sparkを理解すればOK！
 
 ---
 
@@ -98,17 +109,35 @@ section {
 
 引用(https://speakerdeck.com/chie8842/pythondeda-liang-detachu-li-pysparkwoyong-itadetachu-li-tofen-xi-falsekihon?slide=14)
 
+
 ---
 
 ## 使い方
 
-環境構築はいろいろとめんどそうだった(jdkいれて、spark入れてパス通してうんぬんかんぬん)ので、docker-hubで公開されている**いい感じ**のイメージを拝借したいと思います
+環境構築はいろいろとめんどそうだった(jdkいれて、spark入れてパス通してうんぬんかんぬん)ので、docker-hubで公開されている**jupyter公式**のイメージを拝借したいと思います
 
 url(https://hub.docker.com/r/jupyter/pyspark-notebook)
 
 ```js
 $ docker pull jupyter/pyspark-notebook
+$ docker run -itdp 8888:8888 jupyter/pyspark-notebook
 ```
+
+---
+
+## Jupyterとは
+
+データ分析、研究機構当でよく利用されています(知りませんでいた...)
+ブラウザ上でコードを実行できたり、ドキュメントを作成できたり便利そう!
+
+
+---
+
+# まずはチュートリアル!
+
+Sparkにあるクイックスタート(https://spark.apache.org/docs/latest/quick-start.html)
+
+
 
 ---
 
@@ -123,15 +152,42 @@ $ docker pull jupyter/pyspark-notebook
 
 ---
 
-## Jupyterとは
 
-データ分析、研究機構当でよく利用されています(知りませんでいた...)
-ブラウザ上でコードを実行できたり、ドキュメントを作成できたりします
+---
+
+<!-- Scoped style -->
+<style scoped>
+section {
+  font-size:30px;
+}
+</style>
+
+```python
+from pyspark.sql.types import *
+from pyspark.context import SparkContext
+from pyspark.sql.session import SparkSession
+
+sc = SparkContext('local')
+spark = SparkSession(sc)
+
+struct = StructType([
+  StructField('name', StringType(), False),
+  StructField('type1', StringType(), False),
+  StructField('type2', StringType(), True),
+])
+
+df = spark.read.csv('pokemon.csv', schema=struct)
+df.show(5)
+df.groupBy('type1').count().sort('count', ascending=False).show(5)
+
+```
 
 ---
 ## 参考資料
 apache spark(https://spark.apache.org/documentation.html)
 
 pyspark(https://spark.apache.org/docs/latest/api/python/index.html)
+
+Apache Sparkの初心者が環境構築とPySparkでのデータ集計までやってみる(https://qiita.com/mkyz08/items/0c1d8fa47179933c3a56)
 
 ---

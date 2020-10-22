@@ -3,7 +3,7 @@ marp: true
 _class: lead
 theme: gaia
 header: ''
-footer: '@takap'
+footer: ''
 
 size: 16:9
 page_number: true

@@ -238,7 +238,7 @@ struct = StructType([
   # StructField(カラム名, 型, nullの可否)
 ])
 
-df = spark.read.csv('pokemon.csv', schema=structm, header=True)  # 元から定義したstructを指定, headerを読み込まない
+df = spark.read.csv('pokemon.csv', schema=struct, header=True)  # 元から定義したstructを指定, headerを読み込まない
 df.show(5)
 df.groupBy('type1').count().sort('count', ascending=False).show(5)
 #  グループして       数え上げて、並び替えて    昇順、降順        表示している
